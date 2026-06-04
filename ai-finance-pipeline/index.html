@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI and the Finance Pipeline — Year 12 Data Science</title>
+  <meta name="description" content="A scrollytelling data story examining how AI is reshaping finance and procurement work in Australia — and why the entry-level pipeline is the central risk for Defence finance." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <span class="header-label">Data Story</span>
+      <span class="header-divider" aria-hidden="true">|</span>
+      <span class="header-title">AI &amp; the Finance Pipeline</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         INTRO / HERO
+         ============================================================ -->
+    <section class="intro-section" aria-label="Introduction">
+      <div class="intro-content">
+        <p class="intro-kicker">Year 12 Data Science</p>
+        <h1 class="intro-headline">
+          AI is not going to change<br />
+          finance work.<br />
+          It already has.
+        </h1>
+        <p class="intro-sub">
+          Six visualisations. Two datasets. One finding that matters
+          for Defence finance: AI automation is concentrated in the
+          junior, routine roles that train young workers to become
+          experienced professionals. This is a pipeline problem —
+          not just a job-loss problem.
+        </p>
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll to begin</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION 1  ·  Power BI — Graph 4 (story position 1)
+         iframe title: Graph4PowerBI
+         Dataset: Our World in Data / Stanford AI Index
+         File: ai_job_postings_REGION.xlsx
+         Shows: Average share of AI-related job postings (%) by
+                country, Asia-Pacific snapshot
+         ============================================================ -->
+    <section
+      class="scrolly-section"
+      id="section-1"
+      data-section="1"
+      data-asset-type="iframe"
+      aria-label="Section 1: Share of AI job postings by region — Our World in Data"
+    >
+      <div class="sticky-col">
+        <div class="graphic-wrap" id="s1-graphic-wrap" style="aspect-ratio: 1024 / 1060;">
+
+          <div class="iframe-wrap">
+            <!-- TODO (manual): verify all Section 1 figures against the OWID grapher
+                 (share-artificial-intelligence-job-postings). graph4data.csv is a single
+                 partial row (UAE) and does not support these numbers. -->
+            <iframe
+              title="Graph4PowerBI"
+              src="https://app.powerbi.com/view?r=eyJrIjoiZjViYWE2M2EtZGMyOC00ZDYxLWI0NmQtNDMyYTkxMTk3ZDA3IiwidCI6ImRhZmZmNzIxLTBkNDAtNGI4OS04NjFlLTYwYjZmZTc4ZDcyMCJ9"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="overlay" id="s1-overlay" aria-hidden="true">
+
+            <div
+              class="overlay-caption overlay-caption--top"
+              data-active-steps="1 2"
+            >
+              <p>This chart compares the average share of AI-related job postings by country across Asia-Pacific.</p>
+            </div>
+
+          </div>
+          <!-- /overlay -->
+        </div>
+        <!-- /graphic-wrap -->
+        <div class="section-counter" aria-hidden="true">01 / 06</div>
+      </div>
+      <!-- /sticky-col -->
+
+      <div class="steps-col" id="s1-steps">
+
+        <!-- STEP 1: Hook -->
+        <div class="step" data-step="1">
+          <div class="step-inner">
+            <span class="step-kicker">Regional Snapshot</span>
+            <h2 class="step-headline">Across Asia-Pacific, employers are already competing for workers with AI skills.</h2>
+            <p class="step-body">
+              This Power BI chart, built from the Our World in Data
+              compilation of the Stanford AI Index, shows the average
+              share of all job postings that mention AI-related skills —
+              broken down by country across Asia-Pacific. This is not a
+              prediction. These are live job advertisements, already
+              published.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 2: Hero stat -->
+        <div class="step" data-step="2">
+          <div class="step-inner">
+            <span class="step-kicker">Australia's Trajectory</span>
+            <div class="hero-stat">
+              <span
+                class="hero-number"
+                id="hero-number-s1"
+                data-target="0"
+                aria-label="7.6 times increase"
+              >7.6×</span>
+              <span class="hero-label">
+                increase in Australia's share of AI-related job postings,
+                from 0.24% in 2014 to 1.78% in 2025 — from the
+                underlying dataset
+              </span>
+            </div>
+            <p class="step-body">
+              This chart is a regional snapshot, not a time series.
+              The 7.6× figure comes from the underlying dataset tracking
+              Australia's share over a decade. The snapshot here places
+              Australia within its regional context — where it sits
+              matters for what comes next.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 3: Asia-Pacific comparison -->
+        <div class="step" data-step="3">
+          <div class="step-inner">
+            <span class="step-kicker">Asia-Pacific</span>
+            <h2 class="step-headline">Singapore leads Asia-Pacific at roughly 4.7%. Hong Kong follows at roughly 3.5%. Australia sits mid-pack at 1.78%.</h2>
+            <p class="step-body">
+              Australia is not an outlier — it is in the current.
+              But Singapore and Hong Kong are significantly further
+              along. Financial and professional services sectors in
+              those markets have integrated AI hiring expectations
+              faster than Australia. The gap is not permanent, but
+              it is measurable.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 4: Australia -->
+        <div class="step" data-step="4">
+          <div class="step-inner">
+            <span class="step-kicker">What 1.78% Means</span>
+            <h2 class="step-headline">Nearly 1 in 55 Australian job postings now explicitly mentions AI skills — and that share has risen sevenfold in a decade.</h2>
+            <p class="step-body">
+              In 2014, Australia's share was 0.24%. By 2025 it is
+              1.78%. That is not a marginal shift — it is a structural
+              change in what employers expect workers to know.
+              For finance and procurement roles specifically, the
+              expectation of AI literacy is already entering job
+              descriptions.
+            </p>
+          </div>
+        </div>
+
+        <!-- STEP 5: Handoff -->
+        <div class="step step--handoff" data-step="5">
+          <div class="step-inner">
+            <span class="step-kicker">What Comes Next</span>
+            <p class="step-body">
+              The regional hiring data shows demand shifting. But
+              demand tells us what employers want — not which tasks
+              they expect AI to perform. The next section maps every
+              major occupation by how much AI will automate its tasks
+              versus how much it will augment the work that remains.
+              Finance does not sit safely in the middle.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /steps-col -->
+    </section>
+    <!-- /section-1 -->
+
+
+    <!-- ============================================================
+         SECTION 2  ·  PNG — Graph2.png
+         Augmentation vs Automation Scatter
+         Dataset: JSA Generative AI Capacity Study
+         Image dims: 595 × 790 px  (≈ 3 : 4, portrait)
+         ============================================================ -->
+    <section
+      class="scrolly-section"
+      id="section-2"
+      data-section="2"
+      data-asset-type="png"
+      aria-label="Section 2: Augmentation vs automation exposure across industries"
+    >
+      <div class="sticky-col">
+        <div class="graphic-wrap" id="s2-graphic-wrap" style="aspect-ratio: 595 / 790;">
+
+          <div class="graphic-placeholder" id="s2-placeholder" role="img"
+               aria-label="Placeholder: Graph2.png not yet loaded">
+            <span class="placeholder-title">Graph 2</span>
+            <span class="placeholder-name">Augmentation vs Automation Scatter</span>
+            <span class="placeholder-hint">→ Ensure <code>Graph2.png</code> is in <code>assets/images/</code></span>
+          </div>
+
+          <img
+            src="assets/images/Graph2.png"
+            alt="Scatter plot: augmentation exposure (y-axis) vs automation exposure (x-axis) for approximately 356 occupations across industry groups. Finance occupations cluster in the upper-right high-exposure zone. Several dots in the top-right corner are circled, representing the highest dual-exposure occupations."
+            class="section-graphic"
+            id="s2-img"
+          />
+
+          <div class="overlay" id="s2-overlay" aria-hidden="true">
+
+            <!-- STEPS 1–2: Hook caption (above the legend) -->
+            <div
+              class="overlay-caption"
+              data-active-steps="1 2"
+              style="top: 61%; bottom: auto;"
+            >
+              <p>Every occupation sits somewhere on this map. Finance does not sit in the middle.</p>
+            </div>
+
+            <!-- STEPS 3–4: Spotlight — top-right high-exposure quadrant -->
+            <svg
+              class="spotlight-svg"
+              data-active-steps="3 4"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="presentation"
+            >
+              <defs>
+                <mask id="s2-topright-mask">
+                  <rect width="100" height="100" fill="white" />
+                  <rect class="spotlight-hole" x="57" y="4" width="35" height="26" fill="black" rx="0.5" />
+                </mask>
+              </defs>
+              <rect width="100" height="100" fill="rgba(0,0,0,0.60)" mask="url(#s2-topright-mask)" />
+            </svg>
+
+            <!-- STEPS 3–4: Label -->
+            <div class="overlay-label" data-active-steps="3 4" style="left: 57%; top: 2%;">
+              <span class="label-text">High exposure zone</span>
+            </div>
+
+            <!-- STEP 4: Callout for circled outlier dots -->
+            <div
+              class="overlay-callout overlay-callout--left"
+              data-active-steps="4"
+              style="left: 54%; top: 7%;"
+            >
+              <span class="callout-text">Finance outliers</span>
+              <div class="callout-leader"></div>
+            </div>
+
+            <!-- STEP 4: Pulse rings -->
+            <div class="pulse-ring-wrap" data-active-steps="4" style="left: 74%; top: 10%;">
+              <div class="pulse-ring pulse-ring--1"></div>
+              <div class="pulse-ring pulse-ring--2"></div>
+              <div class="pulse-dot"></div>
+            </div>
+
+          </div>
+          <!-- /overlay -->
+        </div>
+        <!-- /graphic-wrap -->
+        <div class="section-counter" aria-hidden="true">02 / 06</div>
+      </div>
+      <!-- /sticky-col -->
+
+      <div class="steps-col" id="s2-steps">
+
+        <div class="step" data-step="1">
+          <div class="step-inner">
+            <span class="step-kicker">Two Forces of AI</span>
+            <h2 class="step-headline">AI reshapes work in two ways at once. Finance faces both more than most.</h2>
+            <p class="step-body">
+              Automation replaces tasks. Augmentation changes them —
+              making human judgment more powerful with AI support.
+              This scatter chart, produced in CODAP from the Jobs and
+              Skills Australia Generative AI Capacity Study, plots
+              approximately 356 occupations on both dimensions
+              simultaneously. The x-axis is automation exposure;
+              the y-axis is augmentation exposure.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="step-inner">
+            <span class="step-kicker">Finance in the Scatter</span>
+            <div class="hero-stat">
+              <span
+                class="hero-number"
+                id="hero-number-s2"
+                data-target="71"
+                aria-label="approximately 71 percent"
+              >71%</span>
+              <span class="hero-label">
+                of Accounting, Banking &amp; Financial occupations
+                score above 0.5 on both axes — about 7 in 10 roles in
+                this group
+              </span>
+            </div>
+            <p class="step-body">
+              Most occupations in the economy sit above the diagonal
+              line where augmentation equals automation — meaning AI
+              augments more than it replaces, economy-wide. Finance is
+              an exception. Finance clusters in the top-right corner
+              with one of the narrowest gaps between its automation
+              and augmentation scores, meaning AI both threatens and
+              transforms this sector with unusual intensity.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <div class="step-inner">
+            <span class="step-kicker">The High-Exposure Zone</span>
+            <h2 class="step-headline">Roles scoring above 0.5 on both axes face the steepest combined pressure — and finance occupations cluster there.</h2>
+            <p class="step-body">
+              In the top-right corner of the scatter, automation is
+              not simply replacing work while AI tools enhance
+              something else. Both forces apply simultaneously.
+              Workers in this zone need to adapt the tasks they
+              perform AND develop new AI-collaboration skills.
+              Finance is not at the fringe of this zone. It sits
+              at the centre.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="4">
+          <div class="step-inner">
+            <span class="step-kicker">The Extreme Cases</span>
+            <h2 class="step-headline">The circled outliers are the most AI-pressured occupations in the entire dataset — and finance contributes several.</h2>
+            <p class="step-body">
+              These circled data points represent occupations where
+              both automation and augmentation exposure are near the
+              top of the scale. Multiple occupations from Accounting,
+              Banking and Financial Services sit in this cluster.
+              This is not a coincidence — it reflects the
+              task-intensive, rules-based nature of much finance work,
+              which is exactly the profile AI processes most readily.
+            </p>
+          </div>
+        </div>
+
+        <div class="step step--handoff" data-step="5">
+          <div class="step-inner">
+            <span class="step-kicker">Why It Matters</span>
+            <p class="step-body">
+              The scatter confirms that finance is not an average-risk
+              sector — it is a high-risk one on both dimensions. But
+              the scatter does not yet show where within finance the
+              pressure is concentrated. Section 3 confirms that
+              finance leads every other industry group in the JSA
+              data. Section 4 breaks that down by specific role.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /steps-col -->
+    </section>
+    <!-- /section-2 -->
+
+
+    <!-- ============================================================
+         SECTION 3  ·  Power BI — Graph 3 (story position 3)
+         iframe title: Graph3PowerBI
+         Dataset: JSA Generative AI Capacity Study
+         Shows: Average automation exposure by industry group,
+                drill-down to occupation
+         ============================================================ -->
+    <section
+      class="scrolly-section"
+      id="section-3"
+      data-section="3"
+      data-asset-type="iframe"
+      aria-label="Section 3: Average automation exposure by industry — JSA data"
+    >
+      <div class="sticky-col">
+        <div class="graphic-wrap" id="s3-graphic-wrap" style="aspect-ratio: 1024 / 1060;">
+          <div class="iframe-wrap">
+            <!-- TODO (manual): ensure the published Power BI for this section is built on
+                 the full graph1data.csv (357 occupations, 23 groups), NOT graph3data.csv,
+                 which only contains the Advertising/Media/PR group. -->
+            <iframe
+              title="Graph3PowerBI"
+              src="https://app.powerbi.com/view?r=eyJrIjoiNjg3NzliOGEtZjQwMi00ZjRmLWJiYzQtNWM1YTMyNzcwMGIyIiwidCI6ImRhZmZmNzIxLTBkNDAtNGI4OS04NjFlLTYwYjZmZTc4ZDcyMCJ9"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="overlay" id="s3-overlay" aria-hidden="true">
+
+            <div class="overlay-caption overlay-caption--top" data-active-steps="1 2">
+              <p>Across 23 industry groups, one consistently leads: Accounting, Banking &amp; Financial Services.</p>
+            </div>
+
+            <!-- STEP 2–3: Finance industry label -->
+            <div
+              class="overlay-label"
+              data-active-steps="2 3"
+              style="left: 60%; top: 22%;"
+            >
+              <span class="label-text">Accounting, Banking &amp; Financial</span>
+            </div>
+
+            <!-- STEP 3: Cross-industry callout -->
+            <div
+              class="overlay-callout"
+              data-active-steps="3"
+              style="left: 38%; top: 55%;"
+            >
+              <div class="callout-leader"></div>
+              <span class="callout-text">Highest of 23 groups</span>
+            </div>
+
+          </div>
+          <!-- /overlay -->
+        </div>
+        <!-- /graphic-wrap -->
+        <div class="section-counter" aria-hidden="true">03 / 06</div>
+      </div>
+      <!-- /sticky-col -->
+
+      <div class="steps-col" id="s3-steps">
+
+        <div class="step" data-step="1">
+          <div class="step-inner">
+            <span class="step-kicker">The Industry Ranking</span>
+            <h2 class="step-headline">Finance is not just one of many sectors at risk. The JSA data ranks it the most automation-exposed of all 23 industry groups.</h2>
+            <p class="step-body">
+              The Jobs and Skills Australia Generative AI Capacity
+              Study classifies every occupation by industry group and
+              calculates average automation exposure scores. This
+              Power BI chart ranks all 23 industry groups. Accounting,
+              Banking and Financial Services reaches an average
+              automation exposure score of approximately 0.60 —
+              placing it at the top of the distribution.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="step-inner">
+            <span class="step-kicker">Above Manufacturing. Above Logistics.</span>
+            <h2 class="step-headline">Finance scores higher than manufacturing, transport, and logistics — sectors most people assume are most at risk from automation.</h2>
+            <p class="step-body">
+              This matters for how Defence understands its finance
+              and procurement workforce. The disruption conversation
+              in government often focuses on physical and industrial
+              work. The data shows the office-based, analytical
+              work inside finance carries equal or greater exposure.
+              Drilling down within the finance group, Accounting
+              Clerks reach an exposure score of approximately 0.71
+              and Auditors are lowest at approximately 0.45.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <div class="step-inner">
+            <span class="step-kicker">Both Directions</span>
+            <h2 class="step-headline">Finance also ranks near the top for augmentation — meaning the work that remains will be AI-supported, not AI-free.</h2>
+            <p class="step-body">
+              Finance does not simply lose tasks to automation and
+              recover. The remaining work will increasingly require
+              AI collaboration — verifying AI outputs, supervising
+              AI-assisted analysis, and exercising judgment that AI
+              cannot replicate. Both transitions reshape the skills
+              a finance professional needs. Neither is passive.
+            </p>
+          </div>
+        </div>
+
+        <div class="step step--handoff" data-step="4">
+          <div class="step-inner">
+            <span class="step-kicker">In Their Own Words</span>
+            <div class="quote-card">
+              <blockquote class="quote-text">
+                "If AI continues advancing at the pace it is now, I can
+                see it taking over a lot of analytical, administrative,
+                and office-type work."
+              </blockquote>
+              <cite class="quote-attribution">
+                — <strong>Financial Contractor</strong>, Australian Defence Force, interviewed 2026.
+              </cite>
+            </div>
+            <p class="step-body">
+              Industry-level data sets the context. The next section
+              zooms inside finance — showing the eight specific
+              occupations that form the core of a finance and
+              procurement workforce, and the clear divide in exposure
+              between junior and senior roles.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /steps-col -->
+    </section>
+    <!-- /section-3 -->
+
+
+    <!-- ============================================================
+         SECTION 4  ·  PNG — Graph4.png
+         Automation Exposure: Junior vs Senior Finance Roles
+         Dataset: JSA Generative AI Capacity Study
+         Image dims: 1001 × 502 px  (≈ 2 : 1)
+
+         Chart area (measured from image):
+           X-axis (roles):      image x ≈ 11 % → 97 %
+           Y-axis (exposure):   image y ≈  5 % → 84 %
+           Red bars (bars 1–4): image x ≈  9 % → 54 %  (Junior/Clerical)
+           Blue bars (bars 5–8):image x ≈ 53 % → 97 %  (Senior/Prof.)
+         ============================================================ -->
+    <section
+      class="scrolly-section"
+      id="section-4"
+      data-section="4"
+      data-asset-type="png"
+      aria-label="Section 4: Automation exposure by finance role — junior vs senior"
+    >
+      <div class="sticky-col">
+        <div class="graphic-wrap" id="s4-graphic-wrap" style="aspect-ratio: 1001 / 502;">
+
+          <div class="graphic-placeholder" id="s4-placeholder" role="img"
+               aria-label="Placeholder: Graph4.png not yet loaded">
+            <span class="placeholder-title">Graph 4</span>
+            <span class="placeholder-name">Automation Exposure by Finance Role</span>
+            <span class="placeholder-hint">→ Ensure <code>Graph4.png</code> is in <code>assets/images/</code></span>
+          </div>
+
+          <img
+            src="assets/images/Graph4.png"
+            alt="Bar chart: automation exposure scores (0–0.8) for eight finance occupations. Red bars (Junior/Clerical: Accounting Clerks 0.71, Bookkeepers 0.69, Payroll Clerks 0.68, Credit and Loans Officers 0.68) score higher than blue bars (Senior/Professional: Accountants 0.54, Financial Brokers 0.47, Finance Managers 0.46, Auditors 0.45)."
+            class="section-graphic"
+            id="s4-img"
+          />
+
+          <div class="overlay" id="s4-overlay" aria-hidden="true">
+
+            <!-- STEPS 1–2: Hook caption -->
+            <div class="overlay-caption" data-active-steps="1 2">
+              <p>Inside finance, the risk is not evenly spread. The junior roles score markedly higher than the senior ones.</p>
+            </div>
+
+            <!-- STEP 3: Spotlight on red / Junior-Clerical bars -->
+            <svg
+              class="spotlight-svg"
+              data-active-steps="3"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="presentation"
+            >
+              <defs>
+                <mask id="s4-red-mask">
+                  <rect width="100" height="100" fill="white" />
+                  <rect class="spotlight-hole" x="9" y="4" width="45" height="82" fill="black" rx="0.5" />
+                </mask>
+              </defs>
+              <rect width="100" height="100" fill="rgba(0,0,0,0.62)" mask="url(#s4-red-mask)" />
+            </svg>
+
+            <!-- STEP 3: "Junior / Clerical" region label -->
+            <div class="overlay-label" data-active-steps="3" style="left: 10%; top: 3%;">
+              <span class="label-text">Junior / Clerical</span>
+            </div>
+
+            <!-- STEP 3: Value badge above tallest bar (Accounting Clerks 0.71) -->
+            <div class="overlay-value" data-active-steps="3" style="left: 13%; top: 9%;">
+              <span class="value-text">0.71</span>
+            </div>
+
+            <!-- STEP 4: Spotlight on blue / Senior-Professional bars -->
+            <svg
+              class="spotlight-svg"
+              data-active-steps="4"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="presentation"
+            >
+              <defs>
+                <mask id="s4-blue-mask">
+                  <rect width="100" height="100" fill="white" />
+                  <rect class="spotlight-hole" x="53" y="4" width="45" height="82" fill="black" rx="0.5" />
+                </mask>
+              </defs>
+              <rect width="100" height="100" fill="rgba(0,0,0,0.62)" mask="url(#s4-blue-mask)" />
+            </svg>
+
+            <!-- STEP 4: "Senior / Professional" region label -->
+            <div class="overlay-label" data-active-steps="4" style="left: 54%; top: 3%;">
+              <span class="label-text">Senior / Professional</span>
+            </div>
+
+            <!-- STEP 4: Value badge above Accountants bar (0.54) -->
+            <div class="overlay-value" data-active-steps="4" style="left: 56%; top: 24%;">
+              <span class="value-text">0.54</span>
+            </div>
+
+          </div>
+          <!-- /overlay -->
+        </div>
+        <!-- /graphic-wrap -->
+        <div class="section-counter" aria-hidden="true">04 / 06</div>
+      </div>
+      <!-- /sticky-col -->
+
+      <div class="steps-col" id="s4-steps">
+
+        <div class="step" data-step="1">
+          <div class="step-inner">
+            <span class="step-kicker">Role by Role</span>
+            <h2 class="step-headline">The divide between junior and senior finance roles is the central finding in the occupation-level data.</h2>
+            <p class="step-body">
+              This bar chart, produced from the Jobs and Skills
+              Australia Generative AI Capacity Study data in
+              Google Colab, plots eight finance occupations by
+              automation exposure score. The split between red
+              (junior/clerical) and blue (senior/professional)
+              bars tells the core story of where the risk sits.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="step-inner">
+            <span class="step-kicker">The Highest Score</span>
+            <div class="hero-stat">
+              <span
+                class="hero-number"
+                id="hero-number-s4"
+                data-target="71"
+                aria-label="automation exposure score of 0.71 out of 1.0"
+              >71%</span>
+              <span class="hero-label">
+                automation exposure score for Accounting Clerks —
+                the highest of any finance occupation in the JSA dataset
+                (score out of 1.0, shown here ×100)
+              </span>
+            </div>
+            <p class="step-body">
+              A high automation exposure score of 0.71 means
+              Accounting Clerks carry the greatest concentration
+              of technically substitutable tasks of any measured
+              finance role. This is not a statement that 71% of
+              Accounting Clerk jobs will disappear overnight —
+              it is a measure of how much of the work profile
+              is technically within reach of current AI systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <div class="step-inner">
+            <span class="step-kicker">The Clerical Layer</span>
+            <h2 class="step-headline">Accounting Clerks (0.71), Bookkeepers (0.69), Payroll Clerks (0.68), and Credit &amp; Loans Officers (0.68) all score 0.68 or above.</h2>
+            <p class="step-body">
+              These four roles define the clerical entry level of
+              the finance workforce. They handle high-volume,
+              rules-based transactions — precisely the task
+              profile that AI systems are designed to process.
+            </p>
+            <p class="step-evidence">
+              This pressure is already visible in real hiring
+              decisions. Fortune has reported that major Wall
+              Street firms are weighing cuts to junior analyst
+              hiring of up to two-thirds as banks lean more
+              heavily on AI for the routine analytical work that
+              once defined those roles (Lake, 2025). The task
+              profile driving those cuts is identical to the one
+              the exposure data scores most exposed.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="4">
+          <div class="step-inner">
+            <span class="step-kicker">The Professional Layer</span>
+            <h2 class="step-headline">Senior roles score lower — but not low. Accountants reach 0.54; Finance Managers and Auditors sit at 0.45–0.46.</h2>
+            <p class="step-body">
+              A score of 0.54 for Accountants is still high by
+              cross-sector standards. The gap between junior and
+              senior is not a gap between risk and safety. It is
+              a gap between immediate task substitution and more
+              gradual reshaping. Senior finance work requires
+              judgment, accountability and professional discretion —
+              the qualities that survive automation. But they do
+              not confer immunity.
+            </p>
+          </div>
+        </div>
+
+        <div class="step step--handoff" data-step="5">
+          <div class="step-inner">
+            <span class="step-kicker">The Core Question</span>
+            <p class="step-body">
+              The four highest-scoring roles are also the roles
+              where most young finance workers start their careers.
+              If those roles automate, they do not just disappear —
+              they take their training function with them. Section 5
+              asks whether that process is already under way.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /steps-col -->
+    </section>
+    <!-- /section-4 -->
+
+
+    <!-- ============================================================
+         SECTION 5  ·  Power BI — Graph 5 (story position 5)
+         iframe title: Graph5PowerBI
+         Dataset: JSA Generative AI Capacity Study
+         Shows: Entry-level job ad share vs automation exposure
+                band; pipeline-risk analysis within finance
+         ============================================================ -->
+    <section
+      class="scrolly-section"
+      id="section-5"
+      data-section="5"
+      data-asset-type="iframe"
+      aria-label="Section 5: Entry-level pipeline risk — JSA data"
+    >
+      <div class="sticky-col">
+        <div class="graphic-wrap" id="s5-graphic-wrap" style="aspect-ratio: 1024 / 1060;">
+          <div class="iframe-wrap">
+            <iframe
+              title="Graph5PowerBI"
+              src="https://app.powerbi.com/view?r=eyJrIjoiYzJmYTk4ZmQtN2VkOS00MWY1LWJjNDgtMzFlMTU2MjdhZThkIiwidCI6ImRhZmZmNzIxLTBkNDAtNGI4OS04NjFlLTYwYjZmZTc4ZDcyMCJ9"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="overlay" id="s5-overlay" aria-hidden="true">
+
+            <div class="overlay-caption overlay-caption--top" data-active-steps="1 2">
+              <p>Where automation exposure is highest, entry-level job ads are fewest. The pattern is already visible in the data.</p>
+            </div>
+
+          </div>
+          <!-- /overlay -->
+        </div>
+        <!-- /graphic-wrap -->
+        <div class="section-counter" aria-hidden="true">05 / 06</div>
+      </div>
+      <!-- /sticky-col -->
+
+      <div class="steps-col" id="s5-steps">
+
+        <div class="step" data-step="1">
+          <div class="step-inner">
+            <span class="step-kicker">The Pipeline Question</span>
+            <h2 class="step-headline">The real issue is not just which finance roles AI can perform. It is whether entry-level pathways into finance are already thinning.</h2>
+            <p class="step-body">
+              Using Jobs and Skills Australia data, this Power BI
+              chart groups finance occupations by their entry-level
+              job advertisement share and automation exposure band.
+              It treats occupation data as a career pathway map,
+              not just a risk inventory. The key
+              question: do the roles with the highest automation
+              exposure also show fewer entry-level job postings?
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="step-inner">
+            <span class="step-kicker">A Measurable Pattern</span>
+            <h2 class="step-headline">Across finance occupations, automation exposure and entry-level job ad share show a moderate negative relationship.</h2>
+            <p class="step-body">
+              Across finance occupations, automation exposure and
+              entry-level job ad share have a moderate negative
+              correlation of approximately −0.56. The grouped Power BI
+              view supports this pattern: the high entry-level share
+              band has lower average automation exposure, while the
+              medium and low entry-level bands carry higher exposure.
+              This matters because the roles most exposed to AI are
+              not necessarily the strongest entry points for young
+              workers.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <div class="step-inner">
+            <span class="step-kicker">The Generational Risk</span>
+            <h2 class="step-headline">If junior roles automate before young workers have moved up, the profession loses the training ground that makes senior professionals.</h2>
+            <p class="step-body">
+              The roles most likely to be automated — Accounting
+              Clerks, Bookkeepers, Payroll Clerks — are also the
+              roles that teach young finance workers the fundamentals
+              of the profession. Automating those roles does not
+              just reduce headcount. It removes the learning
+              pathway through which junior workers become senior ones.
+              If the bottom rung disappears, the ladder collapses
+              from below.
+            </p>
+            <p class="step-evidence">
+              This is not only a projection. A Stanford Digital
+              Economy Lab study analysing payroll records from
+              millions of US workers
+              found that early-career workers aged 22 to 25 in the
+              most AI-exposed occupations have already experienced
+              a 13% relative decline in employment since late 2022,
+              while older workers in the same roles held steady
+              (Stanford Digital Economy Lab, 2025). Critically,
+              those declines were concentrated in roles where AI
+              automates rather than augments the work — the same
+              pattern the exposure data flags for entry-level
+              finance roles. The bottom rung is not disappearing
+              in theory; it is measurably thinning.
+            </p>
+          </div>
+        </div>
+
+        <div class="step step--handoff" data-step="4">
+          <div class="step-inner">
+            <span class="step-kicker">In Their Own Words</span>
+            <div class="quote-card">
+              <blockquote class="quote-text">
+                "In many industries, younger employees traditionally
+                start by doing simpler or more repetitive tasks, and
+                through that process they learn, gain experience, and
+                gradually progress into more advanced roles. If AI
+                replaces too many of those early-stage
+                responsibilities… we may face a shortage of
+                experienced professionals five or ten years
+                down the track."
+              </blockquote>
+              <cite class="quote-attribution">
+                — <strong>Financial Contractor</strong>, Australian Defence Force, interviewed 2026.
+              </cite>
+            </div>
+            <p class="step-body">
+              This is the risk the data story is built around.
+              AI may not immediately replace experienced Defence
+              finance professionals. But if it automates the
+              entry-level work that trains the next generation,
+              the profession faces a pipeline problem — not just
+              a job-loss problem. Section 6 shows what the
+              data says about how different finance roles should
+              respond.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /steps-col -->
+    </section>
+    <!-- /section-5 -->
+
+
+    <!-- ============================================================
+         SECTION 6  ·  Power BI — Graph 6 (story position 6)
+         iframe title: Graph6PowerBI
+         Dataset: JSA Generative AI Capacity Study
+                  (JSA_Finance_Graph6_Skill_Change_CLEAN.csv)
+         Shows: Bar chart comparing automation exposure and
+                skill-change pressure by finance role type.
+                Clerical/processing ~0.67 automation, ~0.45
+                skill-change. Senior/management ~0.46 automation,
+                ~0.61 skill-change. The two metrics invert across
+                the career hierarchy.
+         ============================================================ -->
+    <section
+      class="scrolly-section"
+      id="section-6"
+      data-section="6"
+      data-asset-type="iframe"
+      aria-label="Section 6: Automation exposure vs skill-change pressure by finance role type"
+    >
+      <div class="sticky-col">
+        <div class="graphic-wrap" id="s6-graphic-wrap" style="aspect-ratio: 1024 / 1060;">
+          <div class="iframe-wrap">
+            <!-- TODO (manual): graph6data.csv currently contains the AUGMENTATION column,
+                 not skill-change. The narrative needs Rate_of_skill_change. Rebuild this
+                 Power BI chart to plot Automation_exposure vs (Rate_of_skill_change/10)
+                 per role group, or the chart will contradict the text. -->
+            <iframe
+              title="Graph6PowerBI"
+              src="https://app.powerbi.com/view?r=eyJrIjoiZTYwY2UzMGQtYjBkMS00YzVlLTgwMTgtNjM2MDNiZTZjNjFjIiwidCI6ImRhZmZmNzIxLTBkNDAtNGI4OS04NjFlLTYwYjZmZTc4ZDcyMCJ9"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="overlay" id="s6-overlay" aria-hidden="true">
+
+            <div class="overlay-caption overlay-caption--top" data-active-steps="1 2">
+              <p>Routine roles face the highest automation risk. Senior roles face the highest pressure to develop new capabilities. The two pressures run in opposite directions.</p>
+            </div>
+
+          </div>
+          <!-- /overlay -->
+        </div>
+        <!-- /graphic-wrap -->
+        <div class="section-counter" aria-hidden="true">06 / 06</div>
+      </div>
+      <!-- /sticky-col -->
+
+      <div class="steps-col" id="s6-steps">
+
+        <div class="step" data-step="1">
+          <div class="step-inner">
+            <span class="step-kicker">The Adaptation Picture</span>
+            <h2 class="step-headline">This final chart compares two pressures — automation exposure and skill-change pressure — across finance role types. They move in opposite directions.</h2>
+            <p class="step-body">
+              This bar chart, built from Jobs and Skills Australia
+              skill-change data, groups finance occupations into
+              role types and compares two scores for each: automation
+              exposure (how much of the work AI can technically
+              perform) and skill-change pressure (how urgently those
+              roles need to develop new capabilities). The pattern
+              that emerges is the most important finding in the
+              whole data story.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <div class="step-inner">
+            <span class="step-kicker">Clerical and Processing Roles</span>
+            <h2 class="step-headline">Clerical roles average approximately 0.67 on automation exposure but only 0.48 on skill-change pressure — the most structurally at-risk combination.</h2>
+            <p class="step-body">
+              High automation exposure with low skill-change pressure
+              means these roles face the greatest substitution risk
+              while their skill profile is evolving the least rapidly.
+              The work is being automated, and the workers in those
+              roles are not currently being pushed toward the new
+              capabilities that would help them adapt. This is not
+              a reason to abandon these workers — it is a reason
+              to act.
+            </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <div class="step-inner">
+            <span class="step-kicker">Senior and Management Roles</span>
+            <h2 class="step-headline">Senior roles average approximately 0.50 on automation but 0.55 on skill-change pressure. The pattern inverts across the career ladder.</h2>
+            <p class="step-body">
+              Where automation risk is lower, the pressure to adapt
+              skills rapidly is higher. Senior finance and management
+              roles are not being automated away — they are being
+              transformed. The work that remains after automation
+              increasingly demands judgment, AI output verification,
+              and professional accountability. Those capabilities
+              are in higher demand at the senior level precisely
+              because AI cannot fully replicate them.
+            </p>
+          </div>
+        </div>
+
+        <div class="step step--handoff" data-step="4">
+          <div class="step-inner">
+            <span class="step-kicker">Final Word</span>
+            <p class="step-body">
+              The data does not argue that AI will eliminate finance
+              work. It argues something more specific: AI is automating
+              the routine work first, and the routine work is where
+              the profession teaches its next generation. A Defence
+              financial contractor with direct experience of AI in
+              government procurement was direct about this: "you
+              still can't rely 100% on AI — at the end of the day,
+              humans are still responsible for the work and the
+              outcomes AI produces." That accountability — the
+              capacity to direct, verify and own AI-supported
+              decisions — is exactly what the skill-change data
+              shows will be in increasing demand. The pipeline
+              that develops it starts at entry level. Protecting
+              that pipeline is not just a workforce concern.
+              For Defence finance and procurement, it is a
+              professional infrastructure concern.
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- /steps-col -->
+    </section>
+    <!-- /section-6 -->
+
+
+    <!-- ============================================================
+         OUTRO
+         ============================================================ -->
+    <section class="outro-section" aria-label="End of story">
+      <div class="outro-content">
+        <p class="outro-kicker">The Argument, Summarised</p>
+        <h2 class="outro-headline">
+          Two datasets. Six views.<br />
+          One finding that matters<br />
+          for Defence finance.
+        </h2>
+        <p class="outro-sub">
+          AI is not simply replacing finance jobs. It is reshaping
+          finance work unevenly — automating the routine first,
+          transforming the senior roles more slowly. The major risk
+          is not that experienced professionals lose their positions.
+          It is that the entry-level work that trains them may
+          disappear before the next generation has moved through it.
+          That is a pipeline problem — and the data shows it is
+          already measurable.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p class="footer-sources">
+      <strong>References</strong><br />
+      Jobs and Skills Australia. (2024). <em>Generative Artificial Intelligence Capacity Study.</em> [online] Available at:
+      <a href="https://www.jobsandskills.gov.au/studies/generative-artificial-intelligence-capacity-study"
+         target="_blank" rel="noopener">https://www.jobsandskills.gov.au/studies/generative-artificial-intelligence-capacity-study</a>.
+      Supports Sections 2, 3, 4, 5 and 6.<br />
+      Our World in Data. (n.d.). <em>Share of artificial intelligence jobs among all job postings.</em> [online] Available at:
+      <a href="https://ourworldindata.org/grapher/share-artificial-intelligence-job-postings"
+         target="_blank" rel="noopener">https://ourworldindata.org/grapher/share-artificial-intelligence-job-postings</a>.
+      Supports Section 1.<br />
+      Lake, S. (2025). <em>Junior analysts, beware: Your coveted and cushy entry-level Wall Street jobs may soon be eliminated by AI.</em> [online] Fortune. Available at:
+      <a href="https://www.fortune.com/2025/06/02/junior-analysts-wall-street-jobs-taken-by-ai"
+         target="_blank" rel="noopener">https://www.fortune.com/2025/06/02/junior-analysts-wall-street-jobs-taken-by-ai</a>
+      [Accessed 4 Jun. 2026]. Supports Section 4.<br />
+      Stanford Digital Economy Lab. (2025). <em>Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence.</em> [online] Available at:
+      <a href="https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
+         target="_blank" rel="noopener">https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/</a>.
+      Supports Section 5.
+    </p>
+    <p class="footer-colophon">
+      Built with vanilla HTML, CSS, and JavaScript.
+      Charts produced in Power BI, CODAP, and Google Colab.
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
