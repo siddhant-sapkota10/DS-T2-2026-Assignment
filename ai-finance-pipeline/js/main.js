@@ -50,25 +50,13 @@ const SECTION_CONFIGS = [
      Asset: iframe  ·  1024 × 1060 px embed
      Narrative: Global AI hiring trends — the opener
      ─────────────────────────────────────────────────────────────────────────
-     heroCountTarget: TODO — replace 0 with the actual growth figure once
-     you can see what number the Power BI chart highlights.
+     Section 1 keeps the exact visible decimal stat in HTML instead of
+     using the whole-number count-up.
      ────────────────────────────────────────────────────────────────────────── */
   {
     id:          'section-1',
     assetType:   'iframe',
     totalSteps:  5,
-
-    /*
-      TODO: set heroCountTarget to the real stat visible in this chart,
-      e.g. if it shows a 3× rise, use heroCountTarget: 200 (= 200%)
-      with heroCountSuffix: '%'.
-      Until set, the hero number shows "—" and the count-up is skipped.
-    */
-    heroCountEl:       'hero-number-s1',
-    heroCountTarget:   0,        /* TODO: replace with actual figure */
-    heroCountSuffix:   '%',
-    heroCountStep:     2,
-    heroCountDuration: 2000,
 
     warmStep: 5,
   },

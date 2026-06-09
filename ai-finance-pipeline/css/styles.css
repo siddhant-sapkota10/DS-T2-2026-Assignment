@@ -228,19 +228,6 @@ ul[role="list"], ol[role="list"] { list-style: none; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding-bottom: 15vh;
-  /* Background tone shift driven by JS class .is-warm (step 5) */
-  transition: background-color 1.2s ease;
-}
-
-/*
-  Warm tone shift applied by JS when step 5 (handoff) is active.
-  A very subtle radial amber bloom — not a hard colour swap.
-*/
-.scrolly-section.is-warm {
-  background-image:
-    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(200, 130, 50, 0.045) 0%, transparent 100%),
-    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
 }
 
 
@@ -822,46 +809,8 @@ ul[role="list"], ol[role="list"] { list-style: none; }
 
 
 /* ==========================================================================
-   16. OUTRO & FOOTER
+   16. FOOTER
    ========================================================================== */
-
-.outro-section {
-  min-height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7rem 2rem;
-  border-top: 1px solid var(--rule);
-}
-
-.outro-content {
-  max-width: 660px;
-  text-align: center;
-}
-
-.outro-kicker {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-  display: block;
-}
-
-.outro-headline {
-  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
-}
-
-.outro-sub {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.75;
-}
 
 .site-footer {
   padding: 2.5rem 2rem;
@@ -1018,4 +967,57 @@ ul[role="list"], ol[role="list"] { list-style: none; }
     transform: translate(-50%, -50%) scale(1.6) !important;
     opacity: 0.4 !important;
   }
+}
+
+
+/* ==========================================================================
+   19. REFLECTION SECTION (personal author's coda)
+   ========================================================================== */
+.reflection-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 2rem;
+  border-top: 1px solid var(--accent-border);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, var(--accent-glow) 0%, transparent 100%),
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+}
+
+.reflection-content {
+  max-width: 680px;
+  text-align: left;
+}
+
+.reflection-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+}
+
+.reflection-lede {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+.reflection-body {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.reflection-body:last-child {
+  color: var(--text-primary);
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+  font-style: italic;
 }
