@@ -65,7 +65,7 @@ const SECTION_CONFIGS = [
      SECTION 2  ·  PNG  (Graph2.png)
      Asset: PNG  →  assets/images/Graph2.png  ·  595 × 790 px
      Chart: Scatter plot — augmentation exposure (y) vs automation
-            exposure (x) across 200+ occupations / all industry groups.
+            exposure (x) across approximately 356 occupations / all industry groups.
             Circled dots = extreme dual-exposure cases.
      ────────────────────────────────────────────────────────────────────────── */
   {
@@ -73,12 +73,8 @@ const SECTION_CONFIGS = [
     assetType:   'png',
     totalSteps:  5,
 
-    /*
-      TODO: replace 71 with the actual % of Accounting/Banking/Financial
-      occupations scoring above 0.5 on BOTH axes in your dataset.
-    */
     heroCountEl:       'hero-number-s2',
-    heroCountTarget:   71,       /* TODO: verify against data */
+    heroCountTarget:   71,
     heroCountSuffix:   '%',
     heroCountStep:     2,
     heroCountDuration: 2000,
@@ -89,10 +85,7 @@ const SECTION_CONFIGS = [
   /* ──────────────────────────────────────────────────────────────────────────
      SECTION 3  ·  Power BI iframe  (Graph3PowerBI)
      Asset: iframe  ·  1024 × 1060 px embed
-     Narrative: AI skill requirements in finance job postings
-     ─────────────────────────────────────────────────────────────────────────
-     No hero count-up configured — add heroCountEl/Target if the chart
-     has a memorable single statistic to highlight in Step 2.
+     Narrative: Finance industry automation exposure ranking
      ────────────────────────────────────────────────────────────────────────── */
   {
     id:          'section-3',
@@ -113,26 +106,13 @@ const SECTION_CONFIGS = [
     assetType:   'png',
     totalSteps:  5,
 
-    /*
-      71 = the 0.71 automation exposure score for Accounting Clerks.
-      Displayed as "71%" in the text column on Step 2 entry.
-      TODO: confirm this matches the exact figure in your dataset.
-    */
-    heroCountEl:       'hero-number-s4',
-    heroCountTarget:   71,
-    heroCountSuffix:   '%',
-    heroCountStep:     2,
-    heroCountDuration: 2000,
-
     warmStep: 5,
   },
 
   /* ──────────────────────────────────────────────────────────────────────────
      SECTION 5  ·  Power BI iframe  (Graph5PowerBI)
      Asset: iframe  ·  1024 × 1060 px embed
-     Narrative: Australian procurement / Defence finance focus
-     ─────────────────────────────────────────────────────────────────────────
-     Add heroCountEl/Target if the chart has a notable statistic for Step 2.
+     Narrative: Entry-level job-ad share and automation exposure
      ────────────────────────────────────────────────────────────────────────── */
   {
     id:          'section-5',
@@ -145,9 +125,7 @@ const SECTION_CONFIGS = [
   /* ──────────────────────────────────────────────────────────────────────────
      SECTION 6  ·  Power BI iframe  (Graph6PowerBI)
      Asset: iframe  ·  1024 × 1060 px embed
-     Narrative: Organisational response and workforce readiness
-     ─────────────────────────────────────────────────────────────────────────
-     Add heroCountEl/Target if the chart has a notable statistic for Step 2.
+     Narrative: Automation exposure versus skill-change pressure
      ────────────────────────────────────────────────────────────────────────── */
   {
     id:          'section-6',
@@ -233,18 +211,6 @@ function setOverlayStep(overlayEl, stepNum) {
 
 
 /* ==========================================================================
-   UTILITY: Reveal all overlay annotations (reduced-motion path)
-   ========================================================================== */
-
-function revealAllAnnotations(overlayEl) {
-  if (!overlayEl) return;
-  overlayEl.querySelectorAll('[data-active-steps]').forEach(function (el) {
-    el.classList.add('is-active');
-  });
-}
-
-
-/* ==========================================================================
    IMAGE ERROR HANDLER
    Shows the placeholder div when a section-graphic PNG fails to load.
    ========================================================================== */
@@ -322,10 +288,10 @@ function initSection(config) {
     overlayEl.classList.add('overlay--iframe');
   }
 
-  /* ── Reduced motion: skip Scrollama, reveal everything immediately ── */
+  /* ── Reduced motion: skip Scrollama and show a static Step 1 view ── */
   if (REDUCED_MOTION) {
     if (graphicWrap) graphicWrap.classList.add('is-visible');
-    revealAllAnnotations(overlayEl);
+    setOverlayStep(overlayEl, 1);
     sectionEl.querySelectorAll('.step').forEach(function (s) {
       s.classList.add('is-active');
     });
@@ -380,7 +346,7 @@ function initSection(config) {
       /* ── Hero count-up (fires once; skips if target is 0 or unset) ── */
       if (
         config.heroCountEl &&
-        config.heroCountTarget &&   /* skip when target is 0 / falsy (= TODO) */
+        config.heroCountTarget &&   /* skip when target is 0 or unset */
         stepNum === (config.heroCountStep || 2) &&
         !heroFired
       ) {

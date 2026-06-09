@@ -634,7 +634,7 @@ ul[role="list"], ol[role="list"] { list-style: none; }
    ========================================================================== */
 
 .overlay-caption {
-  display: none;
+  display: block;
   position: absolute;
   bottom: 5%;
   left: 4%;
@@ -821,11 +821,22 @@ ul[role="list"], ol[role="list"] { list-style: none; }
   gap: 0.5rem;
 }
 
+.footer-sources {
+  font-size: 0.78rem;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .footer-sources,
 .footer-colophon {
-  font-size: 0.68rem;
   color: var(--text-muted);
   letter-spacing: 0.02em;
+}
+
+.footer-colophon {
+  font-size: 0.68rem;
 }
 
 
@@ -921,7 +932,7 @@ ul[role="list"], ol[role="list"] { list-style: none; }
 /* ==========================================================================
    18. REDUCED MOTION  (prefers-reduced-motion: reduce)
    All animations and transitions are disabled. Overlay elements are
-   shown immediately in their final state rather than fading in on scroll.
+   limited to the Step 1 annotations selected by the JavaScript fallback.
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -945,14 +956,13 @@ ul[role="list"], ol[role="list"] { list-style: none; }
     transform: none !important;
   }
 
-  /* Reveal all overlay annotations at once in final state */
+  /* Show only annotations selected by the reduced-motion fallback */
   [data-active-steps] {
-    opacity: 1 !important;
     transform: none !important;
   }
 
-  .overlay-caption {
-    transform: translateY(0) !important;
+  [data-active-steps].is-active {
+    opacity: 1 !important;
   }
 
   /* Show quote card without slide animation */
